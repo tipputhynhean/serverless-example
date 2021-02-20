@@ -4,6 +4,33 @@ provider:
   name: aws
   runtime: nodejs12.x
 
+plugins:
+  - serverless-offline
+
 functions:
-  hello:
-    handler: handler.hello
+  getUploadUrl:
+    handler: handler.getUploadUrl
+    events:
+      - http:
+          path: /
+          method: get
+
+resources:
+  Resources:
+    AttachmentsBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: 'tipputhynhean-demo'
+        CorsConfiguration:
+          CorsRules:
+            - AllowedOrigins:
+                - '*'
+            - AllowedHeaders:
+                - '*'
+            - AllowedMethods:
+                - GET
+                - PUT
+                - POST
+                - DELETE
+                - HEAD
+            - MaxAge: 3000

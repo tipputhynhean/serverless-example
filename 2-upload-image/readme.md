@@ -2,7 +2,7 @@ Example of requesting upload url from S3
 
 # How to run
 
-- make sure you change the `AWS_ID` , `AWS_SECRET` & `BUCKET_NAME` to your own
+- make sure you change the `AWS_ID` , `AWS_SECRET` & `BUCKET_NAME` inside `s3.js` to your own
 - Open terminal and make sure you are in this directory
 - `npm i`
 - run `sls deploy` and monitor the output

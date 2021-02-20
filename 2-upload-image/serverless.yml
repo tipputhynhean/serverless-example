@@ -4,9 +4,6 @@ provider:
   name: aws
   runtime: nodejs12.x
 
-plugins:
-  - serverless-offline
-
 functions:
   getUploadUrl:
     handler: handler.getUploadUrl

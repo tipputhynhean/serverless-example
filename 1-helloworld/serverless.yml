@@ -1,9 +1,8 @@
-# serverless.yml
 service: helloworld
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs12.x
 
 functions:
   hello:

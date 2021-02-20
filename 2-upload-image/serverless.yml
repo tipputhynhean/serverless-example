@@ -15,22 +15,24 @@ functions:
           path: /
           method: get
 
-resources:
-  Resources:
-    AttachmentsBucket:
-      Type: AWS::S3::Bucket
-      Properties:
-        BucketName: 'tipputhynhean-demo'
-        CorsConfiguration:
-          CorsRules:
-            - AllowedOrigins:
-                - '*'
-            - AllowedHeaders:
-                - '*'
-            - AllowedMethods:
-                - GET
-                - PUT
-                - POST
-                - DELETE
-                - HEAD
-            - MaxAge: 3000
+# The below section can allow you to create the S3 bucket on function deployment. Make sure you change bucket name tho
+
+# resources:
+#   Resources:
+#     Storage:
+#       Type: 'AWS::S3::Bucket'
+#       Properties:
+#         BucketName: tipputhynhean-sls-uploadimage-demo
+#         CorsConfiguration:
+#           CorsRules:
+#             -
+#               AllowedOrigins:
+#                 - '*'
+#               AllowedHeaders:
+#                 - '*'
+#               AllowedMethods:
+#                 - PUT
+#                 - GET
+#                 - HEAD
+#                 - POST
+#               MaxAge: 3000

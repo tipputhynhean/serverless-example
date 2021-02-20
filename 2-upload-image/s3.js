@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk')
-const AWS_ID = process.env.ACCESSKEY_ID
-const AWS_SECRET = process.env.SECRET_ACCESSKEY
-const BUCKET_NAME = process.env.S3_BUCKET
+const AWS_ID = '' // replace this with your aws access key ID 
+const AWS_SECRET = '' // replace this with your aws secret key
+const BUCKET_NAME = 'tipputhynhean-sls-uploadimage-demo' // replace this with your own bucket
 
 const S3 = new AWS.S3({
   accessKeyId: AWS_ID,

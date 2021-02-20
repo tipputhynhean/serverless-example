@@ -1,0 +1,2 @@
+- run `npm install -g serverless`
+- run `serverless` command and follow instruction
